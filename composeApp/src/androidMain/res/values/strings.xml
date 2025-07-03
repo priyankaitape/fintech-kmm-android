@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Cashi Demo</string>
+
+    <string name="label_title">Title</string>
+    <string name="label_artist">Artist</string>
+    <string name="label_date">Date</string>
+    <string name="label_dimensions">Dimensions</string>
+    <string name="label_medium">Medium</string>
+    <string name="label_department">Department</string>
+    <string name="label_repository">Repository</string>
+    <string name="label_credits">Credits</string>
+
+    <string name="back">Back</string>
+
+    <string name="no_data_available">No data available</string>
+
+    <!-- Send Payment -->
+    <string name="send_payment">Send Payment</string>
+    <string name="transactions">Transactions</string>
+    <string name="recipient_email">Recipient Email</string>
+    <string name="recipient_email_error">Please enter a valid email address</string>
+    <string name="amount">Amount</string>
+    <string name="amount_error">Enter a valid amount greater than 0</string>
+    <string name="send">Send</string>
+    <string name="currency">Currency</string>
+    <string name="currency_error">Currency not supported</string>
+
+    <!-- Transaction scree -->
+    <string name="recipient">Recipient</string>
+    <string name="date">Date</string>
+</resources>
