@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -34,9 +35,25 @@ fun TransactionHistoryScreen(viewModel: PaymentViewModel = koinViewModel()) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            items(payments) { payment ->
-                TransactionItem(payment)
+        if (payments.isEmpty()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(24.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = stringResource(id=R.string.empty_list),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+            }
+        } else {
+            LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                items(payments) { payment ->
+                    TransactionItem(payment)
+                }
             }
         }
     }

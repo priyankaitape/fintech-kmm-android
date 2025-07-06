@@ -1,18 +1,56 @@
+# --- Android Studio & IntelliJ ---
 *.iml
-.kotlin
-.gradle
+.idea/
+*.log
+
+# --- Build Files ---
 **/build/
-xcuserdata
-!src/**/build/
+.gradle/
+.kotlin/
+.externalNativeBuild/
+.cxx/
+
+# --- Local Environment Files ---
 local.properties
-.idea
+*.keystore
+
+# --- macOS ---
 .DS_Store
-captures
-.externalNativeBuild
-.cxx
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Linux/Unix ---
+*~
+
+# --- Xcode (iOS/KMM setup) ---
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
+*.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
+xcuserdata/
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# --- Firebase (exclude ONLY if sensitive/private) ---
+# Uncomment the next line if you're NOT committing google-services.json
+# composeApp/google-services.json
+
+# --- Test & Coverage Outputs ---
+test-output/
+coverage/
+*.ec
+
+# --- Optional Drafts or Temp Files ---
+*.bak
+*.tmp
+*.swp
+
+# ✅ These folders are NEEDED — do NOT ignore
+# .github/workflows/       → Keep GitHub Actions workflows
+# gradle/wrapper/          → Keep Gradle setup
+# images/                  → Keep for README or demo screenshots
+# LICENSE                  → Keep (highly recommended for open source)

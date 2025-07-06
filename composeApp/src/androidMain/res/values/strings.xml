@@ -28,4 +28,5 @@
     <!-- Transaction scree -->
     <string name="recipient">Recipient</string>
     <string name="date">Date</string>
+    <string name="empty_list">No transactions found</string>
 </resources>

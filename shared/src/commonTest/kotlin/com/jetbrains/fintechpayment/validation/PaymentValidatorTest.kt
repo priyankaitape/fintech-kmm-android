@@ -35,7 +35,7 @@ class PaymentValidatorTest {
 
     @Test
     fun `unsupported currency should fail`() {
-        assertFalse(PaymentValidator.isSupportedCurrency("INR"))
-        assertFalse(PaymentValidator.isSupportedCurrency("GBP"))
+        assertFalse(PaymentValidator.isSupportedCurrency("CAD"))
+        assertFalse(PaymentValidator.isSupportedCurrency("AUD"))
     }
 }
